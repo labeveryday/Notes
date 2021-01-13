@@ -1,0 +1,13 @@
+---
+- name: Configure basic network settings on the servers
+  hosts: all
+  tasks:
+  - name: Copy network configuration file to the servers
+      template:
+        src: network-interface.tmpl
+        dest: /root/network-script.sh
+        mode: '744'
+  - name: Execute the network configuration script
+      shell: /root/network-script.sh > /root/network-script.log
+  - name: Add route
+      shell: /sbin/ip route replace {{ remote_subnet }} dev {{ if_name }}

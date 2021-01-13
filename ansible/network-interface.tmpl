@@ -1,0 +1,25 @@
+#!/bin/bash
+
+IF_NAME={{ if_name }}
+IP_ADDRESS={{ ip_address }}
+LOCAL_IP={{ local_ip }}
+REMOTE_IP={{ remote_ip }}
+
+echo "Check if an interface with the correct IP address exists."
+ip address show dev $IF_NAME | grep $IP_ADDRESS
+if [[ $? -eq 0 ]]; then
+  echo "The interface with the correct IP address exists."
+  exit 0
+fi
+
+echo "Check if the interface exits."
+ip address show dev $IF_NAME
+if [[ $? -eq 0 ]]; then
+  echo "The interface exists, deleting the interface."
+  ip link delete dev $IF_NAME
+fi
+
+echo "Applying the new configuration."
+ip link add name $IF_NAME type ipip local $LOCAL_IP remote $REMOTE_IP
+ip link set $IF_NAME up
+ip addr add $IP_ADDRESS dev $IF_NAME

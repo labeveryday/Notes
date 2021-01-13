@@ -1,0 +1,6 @@
+---
+if_name: ipip1
+ip_address: 192.168.2.1/24
+local_ip: 172.20.0.22
+remote_ip: 172.20.0.21
+remote_subnet: 192.168.1.0/24
