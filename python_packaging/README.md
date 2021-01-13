@@ -1,4 +1,4 @@
-# How to schedule a Python Package
+# How to structure a Python Package
 
 Created by [Du'An] [Lightfoot]
 
