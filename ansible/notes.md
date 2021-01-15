@@ -1,15 +1,48 @@
 # Ansible Notes
 
-Geneerate an SSH Key on a local device
+Ansible is an open source configuration management tool. 
+
+[Go here for ansbile documentation](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
+
+___
+
+## Setting up your device
+
+Generate an SSH Key on a local device
 
 `ssh-keygen -t rsa`
 
 Copy the public key to the device 
 
-`ssh-copy-id -p 20001 root@192.168.0.20`
+`ssh-copy-id -p 22 root@192.168.1.1`
+
+___
+
+## Installing Ansible 
+
+>NOTE: Before installing Ansible. First create a virtual environment
+cd to your desired directory
+```python
+python3 -m venv venv
+```
+
+Install ansible on MAC `This should be done via pip`
+```python
+python3 -m pip install ansible
+```
+
+Note if netmiko is nornir is not installed you will have to install paramiko. This is already a preq for the packages mentioned.
+
+```python
+python3 -m pip install paramiko
+```
+
+___
+
+## Configure an Ansible playbook
 
 create a `host` file and add the device configurations
-```
+```yaml
 [servers]
 server01 ansible_host=192.168.0.20 ansible_port=20001 ansible_user=root
 server02 ansible_host=192.168.0.20 ansible_port=20002 ansible_user=root
