@@ -2,7 +2,7 @@
 
 Examples
 
-```
+```python
 # Tuples
 x = (1,)
 y = 1,
@@ -10,32 +10,35 @@ y = 1,
 
 Sets
 
-```
+```python
 x = {4}
 ```
 
 List comprehensions
-```
+
+```python
 numbers = [1, 2, 4, 5, 7, 8, 10]
 even_numbers = [x for x in numbers if (x %) == 0]
 ```
 
 Lambda functions - used to return outputs (Think of a function)
+
 - Normally given an assigned name
+
 - Single line
 [x,y are params:  x + y are return values]
 
 sequence = [79, 3]
 double = [(lambda x: x * 2)(2) for x in sequence]
 
-```
+```python
 add = lambda x, y: x + y
 add(2, 4)
 ```
 
 Unpacking arguments
 
-```
+```python
 numbers = [1, 9]
 num_dict = {"x": 5, "y": 9}
 
@@ -64,10 +67,9 @@ def apply(*apply(*args, operator)):
 apply(1, 3, 5, 8, operator="+")
 ```
 
-
 Unpacking Keywork arguments
 
-```
+```python
 def named(**kwargs):
     print(kwags)
 
@@ -81,4 +83,3 @@ details = {"name": "Bob", "age": 25}
 
 named(**details)
 ```
-
