@@ -103,3 +103,56 @@ To tell python the needed libraries, use a requirements file. (NOTE you are copy
 Now tell your container to change to the new working directory.
 
 `WORKDIR /app`
+
+### Manage Docker
+
+Once you have your Dockerfile created. To build your container run:
+
+```docker
+docker build -t app .
+```
+
+Start and test your container
+
+`docker run -it -p 5000:5000 app`
+
+View containers that are running
+
+`docker ps`
+
+View all docker containers
+
+`docker ps --all`
+
+Stop a docker container
+
+`docker stop [container id]`
+
+Stop all docker containers
+
+`docker stop $(docker ps -a -q)`
+
+Remove all docker containers
+
+`docker rm $(docker ps -a -q)`
+
+Create and name a docker network
+
+`docker network create --subnet=192.168.0.0/24 --gateway=192.168.0.1 Network_Name`
+
+Verify the network was created
+
+`docker network inspect Network_Name`
+
+Run the container with the network and an ip in the subnet you created
+
+`docker run --net Network_Name --ip 192.168.0.100 -it -d -p 5000:5000 app`
+
+To connect to container through bash
+
+`docker exec -it [container it from docker ps] bash`
+
+## Docker Compose
+
+In a production you will use Docker Compose to specify your container configuration. 
+Kubernetes is another tool. The difference is Kubernetes uses multiple nodes. 

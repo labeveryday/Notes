@@ -73,6 +73,18 @@ IF NOT EXISTS( SELECT NULL
 END IF;
 ```
 
+Create a Database, Table and insert into a table
+
+```sql
+CREATE DATABASE inventory;
+USE inventory;
+CREATE TABLE routers (hostname VARCHAR(255), ip VARCHAR(255));
+INSERT INTO routers VALUES ('r1.example.com', '192.168.1.1');
+INSERT INTO routers VALUES ('r2.example.com', '192.168.1.2');
+INSERT INTO routers VALUES ('r3.example.com', '192.168.1.3');
+```
+
+
 ## Viewing Data in MYSQL
 
 Show SQL version
@@ -96,6 +108,12 @@ view table scheme
 
 ```sql
 DESCRIBE routers;
+```
+
+View entries in a table
+
+```sql
+SELECT * FROM inventory.routers;
 ```
 
 view 10 entries in the database
@@ -159,3 +177,11 @@ install mysql-connector
 ```bash
 pip install mysql-connector
 ```
+
+# mysql and docker
+
+When creating a mysql container you will need to also create a persistent volume for your container. This is so data will be present when stopping and stopping your container.
+
+'''
+docker run --env MYSQL_ALLOW_EMPTY_PASSWORD=yes --net my_network_name --ip 192.168.0.200 -v ~/working_directory/db:/var/lib/mysql -it mysql:5.7
+'''

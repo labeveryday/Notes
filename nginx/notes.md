@@ -1,0 +1,25 @@
+# nginx Notes
+
+Create a nginx.conf file 
+
+```nginx
+events {}
+http {
+
+  upstream myapp {
+    server 172.20.0.100:5000;
+    server 172.20.0.101:5000;
+  }
+
+  server {
+    listen 8080;
+    server_name localhost;
+
+    location / {
+      proxy_pass http://myapp;
+      proxy_set_header Host $host;
+    }
+  }
+
+}
+```
