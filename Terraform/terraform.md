@@ -63,5 +63,3 @@ Builds or changes infrastructure
 ```
 terraform apply
 ```
-
-
