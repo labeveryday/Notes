@@ -8,13 +8,12 @@ Developing Applications using Cisco Core Platforms and APIs v1.0 (350-901)
 
 ### 1.0 Software Development and Design
 
-<input type="checkbox" disabled checked/> Setting up your Linux (Ubuntu) workstation as a development environment
+- [x] Setting up your Linux (Ubuntu) workstation as a development environment
 
-<input type="checkbox" disabled checked/>  Setting up your Windows workstation as a development environment
+- [ ]  Setting up your Windows workstation as a development environment
 
-<input type="checkbox" disabled checked/>  Setting up your macOS workstation as a development environment 
-
-<input type="checkbox" disabled checked/>  What is a Development Environment and why do you need one?
+- [x] Setting up your macOS workstation as a development environment 
+- [x] What is a Development Environment and why do you need one?
 
 <input type="checkbox" disabled checked/>  A brief introduction to Git
 
