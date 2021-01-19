@@ -130,3 +130,6 @@ dmypy.json
 
 # Ignore local notes
 local_notes.txt
+
+# VScode 
+.vscode/
