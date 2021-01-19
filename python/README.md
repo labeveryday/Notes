@@ -1,27 +1,32 @@
 # Python Notes
 
-Examples
+The first thing you need to understand about Python is the data structures. Thesese are the building blocks to your python applications
+
+## Examples
 
 ```python
+# list
+x = [2, 5, 'labeveryday']
+
 # Tuples
 x = (1,)
 y = 1,
-```
 
-Sets
-
-```python
+# Sets
 x = {4}
+
+# Dict
+x = {'num1': 5, 'num2': 9}
 ```
 
-List comprehensions
+### List comprehensions
 
 ```python
 numbers = [1, 2, 4, 5, 7, 8, 10]
 even_numbers = [x for x in numbers if (x %) == 0]
 ```
 
-Lambda functions - used to return outputs (Think of a function)
+### Lambda functions - used to return outputs (Think of a function)
 
 - Normally given an assigned name
 
@@ -36,7 +41,7 @@ add = lambda x, y: x + y
 add(2, 4)
 ```
 
-Unpacking arguments
+### Unpacking arguments
 
 ```python
 numbers = [1, 9]
@@ -67,7 +72,7 @@ def apply(*apply(*args, operator)):
 apply(1, 3, 5, 8, operator="+")
 ```
 
-Unpacking Keywork arguments
+### Unpacking Keywork arguments
 
 ```python
 def named(**kwargs):

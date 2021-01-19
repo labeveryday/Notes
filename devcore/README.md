@@ -8,19 +8,19 @@ Developing Applications using Cisco Core Platforms and APIs v1.0 (350-901)
 
 ### 1.0 Software Development and Design
 
-<input type="checkbox" disabled /> Setting up your Linux (Ubuntu) workstation as a development environment
+<input type="checkbox" disabled checked/> Setting up your Linux (Ubuntu) workstation as a development environment
 
-<input type="checkbox" disabled />  Setting up your Windows workstation as a development environment
+<input type="checkbox" disabled checked/>  Setting up your Windows workstation as a development environment
 
-<input type="checkbox" disabled />  Setting up your macOS workstation as a development environment 
+<input type="checkbox" disabled checked/>  Setting up your macOS workstation as a development environment 
 
-<input type="checkbox" disabled />  What is a Development Environment and why do you need one?
+<input type="checkbox" disabled checked/>  What is a Development Environment and why do you need one?
 
-<input type="checkbox" disabled />  A brief introduction to Git
+<input type="checkbox" disabled checked/>  A brief introduction to Git
 
-<input type="checkbox" disabled />  Intro to Python Part 1
+<input type="checkbox" disabled checked/>  Intro to Python Part 1
 
-<input type="checkbox" disabled />  Intro to Python Part 2
+<input type="checkbox" disabled checked/>  Intro to Python Part 2
 
 <input type="checkbox" disabled />  Coding 202: Parsing JSON using Python
 
