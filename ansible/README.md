@@ -16,7 +16,7 @@ Copy the public key to the device
 
 `ssh-copy-id -p 22 root@192.168.1.1`
 
-On cisco device to resolve no matching key exchange method found.
+On cisco device to resolve the ed25591 key method no matching key exchange method found.
 
 `ssh  -oKexAlgorithms=+diffie-hellman-group1-sha1 -c aes128-cbc -l username 192.168.1.1`
 
