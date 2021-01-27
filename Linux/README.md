@@ -22,6 +22,7 @@ Linux Filesystem:
 - Linux uses a logical hierarchical filesystem
 - At the the very top is the root directory of the file systems is /
 - Linux does not use a physical C: drive like Windows
+- Every application's configuration is saved in a configuration file. To reconfigure an application, simply edit the file.
 
 Here's an example of hierarchy:
 
@@ -119,16 +120,18 @@ mkdir mytest && cd mytest
 | pwd                                               | Print current working directory
 | whoami                                            | To verify which user you're logged in as
 | ls                                                | List contents of working directory (ls -l test.txt will show file permissions and file/group owner)|
+| nl                                                | List contents of a file with line numbers
 | - or --                                           | Use a `-` for single-letter options and `--` for word options
 | cd                                                | To change directory in the filesystem
 | cd ..                                             | Moves up one directory level
 | cd ../..                                          | Moves up two diretory levels
 | cd ../../..                                       | Moves up three directory levels
 | man <command>                                     | View manual pages (how-to) to learn how to use a given command and it’s flags (man ls)
-| locate                                            | to search the entire filesystem (Note:This database is updated once a day. New files may not appear)
+| locate                                            | to search the entire filesystem for every occurance of a word (Note:This database is updated once a day. New files may not appear)
 | whereis                                           | Locates all the Binary files and man page
 | which                                             | Finds the PATH variable for the command you enter on the CLI
 | find                                              | Most powerful for searching for files (name, date, owner, size, group, etc) specify the directory and use wildcards|
+| sed `stream editor`                               | Search for occurences of a word or a text pattern and then perform some action on it. Ex. `sed s/this/This/g Documents/test.txt`|
 | Sudo                                              | Super User Privileges root
 | passwd                                            | To change the current user password
 | $                                                 | Signifies that the user does not have root privileges
@@ -146,10 +149,10 @@ mkdir mytest && cd mytest
 | Cp                                                | Copy a file (cp Oldfile /root/newdir/Oldfile) You have the option to rename as you copy (cp Oldfile /root/newdir/NewfileName)|
 | Mv                                                | Move/rename a file (mv file2 file3) (mv test.txt home/cisco/nexus home/cisco/Testing)
 | More                                              | Similar to using Cisco CLI-space bar takes down a full screen length (% in bottom left)
-| Less                                              | “less is more” Scroll up and down with arrow keys
+| Less                                              | “less is more” Scroll up and down with arrow keys (NOTE: you can also use `/` to search)
 | Cat                                               | Streams the file top to bottom (cat router1.txt)
-| Head                                              | Shows first 10 lines
-| Tail                                              | Shows last 10 lines of a file
+| Head                                              | Shows first 10 lines (NOTE: if you want to see more lines `head -20 /etc/file`)
+| Tail                                              | Shows last 10 lines of a file (NOTE: if you want to see more lines `head -20 /etc/file`)
 | Diff                                              | View the difference between two files (diff -u test.cfg test_new.cfg)
 | Chmod                                             | Change file permissions (use ls -l to view file permissions and the chmod u+x test.txt to add execute)
 | Top                                               | Displays real time processor utilization
@@ -187,4 +190,3 @@ mkdir mytest && cd mytest
 | fping -l 10.1.1.1 10.1.1.2                        |
 
 #### Kali Notes
-
