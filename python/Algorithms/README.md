@@ -173,5 +173,3 @@ def merge_sort(my_list):
         right = merge_sort(my_list[middle:])
         return merge(left, right)
 ```
-
-![mit_merge_sort](https://github.com/labeveryday/Notes/blob/main/images/merge.png)
