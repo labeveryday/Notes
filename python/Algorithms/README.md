@@ -1,16 +1,17 @@
 # This document covers Algorithms
 
+Algorithm - instructions that are used to accomplish a task.
+
 ## Note From MIT
 
 > What Do Computer Scientists Do?
 > They think computationally
 > Abstractions
+>
 > - Choosing the right abstractions
 > - Operating in multiple layers of abstractions simultaneously
 > - Defining
 > algorithms, automated execution
-
-Algorithm - instructions that are used to accomplish a task.
 
 ## Binary Search or bisection search
 
