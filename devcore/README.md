@@ -1,6 +1,7 @@
 # DevCor Notes
 
 [DevCor Exam Topics and Labs](https://developer.cisco.com/certification/exam-topic-core/)
+
 [DevNet Code Repo Here](https://github.com/CiscoDevNet/dne-dna-code)
 
 Developing Applications using Cisco Core Platforms and APIs v1.0 (350-901)
