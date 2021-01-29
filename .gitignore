@@ -133,3 +133,4 @@ local_notes.txt
 
 # VScode 
 .vscode/
+.DS_Store
