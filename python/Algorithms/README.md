@@ -67,7 +67,8 @@ def binary_search(my_list, item):
 - List does not have to be sorted
 - Linear is the worst case because of complexity. You may have to search every item in a list.
 
-### Unsorted Example:
+### Unsorted Example
+
 ```python
 def linear_search(list, item):
     found = False
@@ -77,8 +78,10 @@ def linear_search(list, item):
     return found
 ```
 
-### Sorted Example:
+### Sorted Example
+
 - Search through the list if item is greater than i than item is not in list
+
 ```python
 def linear_search(list, item):
     for i in range(len(list)):
@@ -103,9 +106,9 @@ def linear_search(list, item):
 [8, 7, 9, 10]
 [7, 8, 9. 10]
 
-### Example
+### Bubble Sort Example
 
-```python 
+```python
 def bubble_sort(L):
     swap = False
     while not swap:
@@ -127,7 +130,7 @@ def bubble_sort(L):
 - Repeat this process until you have one sorted list
 - Takes less time
 
-### Example
+### Merge Sort Example
 
 List 1                  List 2             Compare              Result
 [1,5,10,13,14,15]       [3,6,9,11]          [1,3]               []
@@ -169,4 +172,5 @@ def merge_sort(my_list):
         right = merge_sort(my_list[middle:])
         return merge(left, right)
 ```
-![mit_merge_sort](https://github.com/labeveryday/Notes/images/merge.png)
+
+![mit_merge_sort](https://github.com/labeveryday/Notes/blob/main/images/merge.png)
