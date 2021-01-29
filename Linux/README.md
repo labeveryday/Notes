@@ -13,6 +13,10 @@ Case Sensitive:
 
 - The file system is case sensitive `Documents` is not the same as `documents`
 
+Daemon
+
+- A process that runs in the background
+
 Directory:
 
 - A way to organize files in a hierarchical manner
@@ -189,4 +193,18 @@ mkdir mytest && cd mytest
 | Tcpdump -i eth0 tcp port 80 -w /var/temp/test.pcap|
 | fping -l 10.1.1.1 10.1.1.2                        |
 
-#### Kali Notes
+#### Tips
+
+Ubuntu systemd/udev uses `Predictable Interface Names` to prevent eth0 becoming on eth1 on the next boot.
+
+So now interface names incorporate:
+
+> Names incorporating Firmware/BIOS provided index numbers for on-board devices (example: eno1)
+> Names incorporating Firmware/BIOS provided PCI Express hotplug slot index numbers (example: ens1)
+> Names incorporating physical/geographical location of the connector of the hardware (example: enp2s0)
+> Names incorporating the interfaces's MAC address (example: enx78e7d1ea46da)
+> Classic, unpredictable kernel-native ethX naming (example: eth0)
+
+To disable this:
+
+- 
