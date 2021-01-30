@@ -64,57 +64,26 @@ Terminal:
 
 - Ofter refered to as the `CLI` Command line interface
 
-## Configure Linux Dev Environment
+## Environment Variables
 
-Install Linux utilities
+- There are two types of variables: shell and environment
+- Environment variables are process-wide variables built into your system and interface that control the way your system and interface that control the way your system looks, acts, and feels to the user.
+- They are inherited by any child shells or processes
+- Environment variables are always upper case
+- Shell variables are listed in lowercase and are only valid in the shell they are set in
+- They are key value pairs - `KEY=value` of if they are multiple values `KEY=value1:value2`
+- NOTE: If there are spaces it needs to be in quotes -- KEY="this is a value"
+- `env` in bash to view your default environment variables
+- `set` to view all environment variables, including shell variables, local variables, and shell functions such as user-defined variables and command aliases.
+    - NOTE: you can use `set |more` to view page by page and then press enter to go line by line
 
-```bash
-sudo apt update
-sudo apt upgrade
+### Environment Variables Example
 
-sudo apt install curl
-
-sudo apt install libssl-dev
-
-sudo apt install build-essential
-
-sudo apt install git
-
-sudo apt-get install python3-venv
-
-sudo apt install nodejs
-
-sudo apt install npm
-
-sudo apt install snapd
-
-sudo snap install atom --classic
-
-sudo snap install postman
-
-sudo snap install ngrok
-
-sudo apt install apt-transport-https ca-certificates curl software-properties-common
-
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-
-sudo apt update
-
-sudo apt install docker-ce
-
-sudo usermod -aG docker $USER
-```
-
-To verify your linux download
+To change your environment variable and then make the change permanent
 
 ```bash
-echo "hash *file_name.iso" | shasum -a 1 --check
-```
-
-How to create a directory and change to it
-
-```bash
-mkdir mytest && cd mytest
+HISTSIZE=1000
+export HISTSIZE
 ```
 
 ### Linux Commands
@@ -193,7 +162,77 @@ mkdir mytest && cd mytest
 | Tcpdump -i eth0 tcp port 80 -w /var/temp/test.pcap|
 | fping -l 10.1.1.1 10.1.1.2                        |
 
+### Configure Linux Dev Environment
+
+Install Linux utilities
+
+```bash
+sudo apt update
+sudo apt upgrade
+
+sudo apt install curl
+
+sudo apt install libssl-dev
+
+sudo apt install build-essential
+
+sudo apt install git
+
+sudo apt-get install python3-venv
+
+sudo apt install nodejs
+
+sudo apt install npm
+
+sudo apt install snapd
+
+sudo snap install atom --classic
+
+sudo snap install postman
+
+sudo snap install ngrok
+
+sudo apt install apt-transport-https ca-certificates curl software-properties-common
+
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+sudo apt update
+
+sudo apt install docker-ce
+
+sudo usermod -aG docker $USER
+```
+
+To verify your linux download
+
+```bash
+echo "hash *file_name.iso" | shasum -a 1 --check
+```
+
+How to create a directory and change to it
+
+```bash
+mkdir mytest && cd mytest
+```
+
 #### Tips
+
+##### Changing Your Shell prompt
+
+- Use the PS1 environmental variable to modify your prompt
+    - `duan@hostname:current_directory`
+    - `\u` Current user name
+    - `\h` Hostname
+    - `\w` Working directory
+
+```bash
+PS1=labeveryday#
+export PS1
+
+PS1=\u@test#
+
+PS1=
+```
 
 Ubuntu systemd/udev uses `Predictable Interface Names` to prevent eth0 becoming on eth1 on the next boot.
 
