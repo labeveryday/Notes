@@ -94,8 +94,9 @@ select version()
 ```
 
 view mysql databases
+
 ```sql
-show databases;
+SHOW databases;
 ```
 
 view tables

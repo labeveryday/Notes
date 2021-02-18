@@ -14,6 +14,18 @@ What is Docker?
 - Simple CLI that has dockers command that allow you to start, stop, and pull down new containers from docker hub.
 - You can build your own containers using the docker file.
 
+Benefits of using a container:
+
+- Minimize the gap between development and deployment
+- Faster and more lightweight than a VM
+- Applications that work on every machine (with Docker installed)
+- Adds to the DevOps paradigm
+- Package applications and dependencies.
+- Guarantee portability and consistency of execution.
+- Keep an application isolated.
+- Take advantage of the isolation offered by a VM without the overhead.
+- NOTE there is only one kernel
+
 ## Installing Docker (Ubuntu)
 
 ### Commands
@@ -74,6 +86,47 @@ Run docker to verify that docker is up and running with interactive terminal. Wh
 sudo docker run -it --rm --name nyancat 06kellyjac/nyancat
 ```
 
+Docker Networking
+
+- Docker networks provide more isolation for the containers
+- By default containers run in a bridge network `172.x.x.x`
+
+Examples
+
+```bash
+docker network create <id-n> 
+docker network connect <id-n> <id-c>
+docker run --network custom-net example-app
+```
+
+Docker Peristent Data
+
+Containers are meant to be immutable and disposable by design. 
+
+If you remove/delete your container your data is lost.
+
+NOTE: Filesystem data is not lost if you stop or restart a container
+
+Docker is using three built-in solutions for persisting data:
+
+- Volumes - Best way
+  - /var/lib/docker/volumes
+  - Attach to any container
+  - Non-Docker processes can modify the data at any time
+  - Preferred option for persistent storage
+  - `docker run -v app-volume:/var/lib/app`
+- Bind Mounts
+  - Can point to any path on a file system
+  - `docker run -v /home/cisco/app:/var/lib/app`
+- tmpfs mounts
+  - Memory only
+
+To verify volumes
+
+`docker volume ls`
+
+`docker volume inspect [volume name]`
+
 ### DockerFile - To turn your python apps into a container
 
 In vscode install docker extension
@@ -111,6 +164,9 @@ Once you have your Dockerfile created. To build your container run:
 ```docker
 docker build -t app .
 ```
+Verify your version of Docker
+
+`docker -v`
 
 Start and test your container
 
@@ -124,11 +180,11 @@ View all docker containers
 
 `docker ps --all`
 
-Stop a docker container
+Stop a docker container `Gracefully`
 
 `docker stop [container id]`
 
-Stop all docker containers
+Stop all docker containers `Gracefully`
 
 `docker stop $(docker ps -a -q)`
 
@@ -148,11 +204,30 @@ Run the container with the network and an ip in the subnet you created
 
 `docker run --net Network_Name --ip 192.168.0.100 -it -d -p 5000:5000 app`
 
+Run a docker container with Limited Memory and CPU Resources
+
+`docker run -d --name my_container --publish 8080:8080 --memory 200m --memory-swap 1G --cpu-shares 1024 app`
+
+To remove:
+- all stopped containers
+- all networks not used by at least one container
+- all dangling images
+- all dangling build cache
+
+`docker system prune` 
+
+Also look into: `docker-gctool`
+
 To connect to container through bash
 
 `docker exec -it [container it from docker ps] bash`
 
-## Docker Compose
+#### Resources
 
-In a production you will use Docker Compose to specify your container configuration. 
-Kubernetes is another tool. The difference is Kubernetes uses multiple nodes. 
+[Cisco DevCor E-Learning and Exam Bundle](https://learningnetworkstore.cisco.com/on-demand-e-learning/devcor-and-exam-bundle-eltex-devcor-v1-024496)
+
+[Free - DevNet Docker Content](https://developer.cisco.com/learning/login?refLink=%252Flab%252Fcontainers-101%252Fstep%252F1)
+
+[Understanding Container Images, Part 1: Image Layers](https://blogs.cisco.com/developer/container-image-layers-1)
+
+[Understanding Container Images, Part 2: Optimizing Your Images](https://blogs.cisco.com/developer/container-images-2)

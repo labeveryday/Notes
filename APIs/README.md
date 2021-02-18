@@ -33,7 +33,7 @@ REST - Representational State Transfer
 | Client Error (4xx)| Description                                               |
 | 400               | Bad Request Malformed Syntax                              |
 | 401               | Unauthorized                                              |
-| 403               | Server understood request, but refuses to fulfill it      |
+| 403               | Forbidden Server understood request, but refuses to fulfill it      |
 | 404               | Resource not found given URI                              |
 
 ## CRUD

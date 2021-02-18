@@ -64,6 +64,12 @@ Terminal:
 
 - Ofter refered to as the `CLI` Command line interface
 
+Packages to install
+
+- macOS for tab complete
+
+`brew install bash-completion
+
 ## Environment Variables
 
 - There are two types of variables: shell and environment
@@ -84,6 +90,13 @@ To change your environment variable and then make the change permanent
 ```bash
 HISTSIZE=1000
 export HISTSIZE
+```
+
+To make the change in MAC
+- NOTE: You may have to open and close the shell terminal
+
+```bash 
+echo 'export TEST_VAR=12345' >> ~/.zshenv
 ```
 
 ### Linux Commands
@@ -128,7 +141,7 @@ export HISTSIZE
 | Tail                                              | Shows last 10 lines of a file (NOTE: if you want to see more lines `head -20 /etc/file`)
 | Diff                                              | View the difference between two files (diff -u test.cfg test_new.cfg)
 | Chmod                                             | Change file permissions (use ls -l to view file permissions and the chmod u+x test.txt to add execute)
-| Top                                               | Displays real time processor utilization
+| Top / top -o mem                                  | Displays real time processor utilization
 | Htop                                              | Displays real time processor utilization in an easier to read format
 | Ps                                                | Displays real time processor utilization in an easier to read format (more arguments available)
 | Ps aux                                            | Displays an exhaustive list of all running processes by all users
@@ -234,6 +247,16 @@ PS1=\u@test#
 PS1=
 ```
 
+```bash
+PS1=DevNet#
+export PS1
+
+PS1=\u@test#
+
+PS1=
+```
+
+
 Ubuntu systemd/udev uses `Predictable Interface Names` to prevent eth0 becoming on eth1 on the next boot.
 
 So now interface names incorporate:
@@ -247,3 +270,9 @@ So now interface names incorporate:
 To disable this:
 
 - 
+
+#### To map a different version of python 
+
+```bash
+ln -s /usr/local/Cellar/python@3.7/3.7.9_3/bin/python3.7 /usr/local/bin/python3.7
+```

@@ -159,6 +159,9 @@ These principles helps developers by:
 
 - Making the code flexible
 
+### 12 Factory App methodology
+
+Find more infor here: [12 Factor App](https://12factor.net/)
 
 #### This example breaks the single responsibility principle
 
