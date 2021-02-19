@@ -26,6 +26,12 @@ Benefits of using a container:
 - Take advantage of the isolation offered by a VM without the overhead.
 - NOTE there is only one kernel
 
+What are two differences between a Docker volume and a bind mount?
+
+- A volume uses the /var/lib/docker/volumes path for storing volume data, while the bind mount can be mounted to any file path on a host.
+
+- Non-Docker processes can modify the data on the bind mount path, but they cannot on the volume path.
+
 ## Installing Docker (Ubuntu)
 
 ### Commands
