@@ -75,7 +75,83 @@ Developing Applications using Cisco Core Platforms and APIs v1.0 (350-901)
 - [ ] Managing Cisco Compute with Ansible
 - [ ] Microservices overview
 
-### My Blogs
+---
+
+#### Notes
+
+**Storing Application Secrets**
+
+* Application secrets are:
+    * Credentials used to access to third party systems
+    * Credentials used to connect to databases
+    * Credentials used for API calls
+
+**Secrets can be used by the application based on the following:**
+
+* Direct code storage or through `environment variables`
+> NOTE: If you use this approach you should use environment variables through files. **NOT ON COMMAND LINE**
+* Database storage - One secret to open the database and the rest of the secrets are stored in the database.
+* API syncing services
+* Encryption code storage - *Vaults* 
+* Cloud-based secret services
+* Cloud-based secret services accessed through an API gateway
+
+**Examples for storing secrets**
+
+```python
+# Traditional Secret storing methods
+# store secret in code directly
+MY_SECRET = 'mypasswordkey'
+
+# store secret in environment variable
+MY_SECRET = os.environ["MY_KEY"]
+
+# store secret in database
+db = MySQLdb.connect("10.0.0.1", "username", "mypasswordkey", "MYDB")
+
+# specific API code to connect to the syncing service
+api = 'python code'
+api.get_external_service()
+
+# store secret in code encrypted file that requires a key file
+MYSECRET = '19dNlanY&$2dvU'
+
+```
+
+**Applying End-to-End Encryption for APIs**
+
+The reasons to protect and encrypt API traffic are:
+
+* Business loss
+* Compliance issues
+* Reputation loss
+* Raising in costs
+
+North-south traffic protection is only perimetral security
+
+* This is traffic in and out your network (VPN users)
+
+East-west traffic protection is vital for security
+
+* This is traffic that is moving within your organization (Data Center)
+
+* To protect the east-west traffic, three approaches are available:
+    * TLS or MTLS between services
+    * Service mesh segmentation protocols (Proxy - Recommended) *istio, Linkrd* 
+        * NOTE: when using a sevice mesh ICMP and UDP are not supported and you are not able to inspect the traffic.
+    * Dedicated container firewall
+* TLS East-West protection is similar to the north-south traffic protection
+
+Options to protect north-south traffic:
+
+* Using traditional TLS authentication and encryption or Mutual TLS (MTLS) authentication
+* Using TLS or IPsec from the client to an API gateway or NGFW
+* Using a cloud-based VPN service
+* Using dedicated cloud connections
+
+---
+
+##### My Blogs
 
 How to become a network engineer
 
@@ -101,7 +177,7 @@ These 5 Learning Labs will Kick Start Your Network Automation Skills
 
 https://blogs.cisco.com/developer/kick-start-network-automation-skills
 
-## Other blogs
+##### Other blogs
 
 How can DevNet Help You?
 - https://blogs.cisco.com/partner/how-can-devnet-help-you?dtid=osscdc000283
