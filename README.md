@@ -5,20 +5,37 @@ This is where I store notes from the different items that I am learning. These n
 ## Table of contents
 
 ✅ [APIs](https://github.com/labeveryday/Notes/tree/main/APIs)
+
 ✅ [Ansible](https://github.com/labeveryday/Notes/tree/main/ansible)
+
 ✅ [Curl](https://github.com/labeveryday/Notes/tree/main/Curl)
+
 ✅ [DEVCOR](https://github.com/labeveryday/Notes/tree/main/devcore)
+
 ✅ [Docker](https://github.com/labeveryday/Notes/tree/main/Docker)
+
 ✅ [Flask](https://github.com/labeveryday/Notes/tree/main/Flask)
+
 ✅ [GIT](https://github.com/labeveryday/Notes/tree/main/Git)
+
 ✅ [Kubernetes](https://github.com/labeveryday/Notes/tree/main/Kubernetes)
+
 ✅ [Linux](https://github.com/labeveryday/Notes/tree/main/Linux)
+
 ✅ [mysql](https://github.com/labeveryday/Notes/tree/main/mysql)
+
 ✅ [netconf](https://github.com/labeveryday/Notes/tree/main/netconf)
+
 ✅ [netmiko](https://github.com/labeveryday/Notes/tree/main/Netmiko)
+
 ✅ [nginx](https://github.com/labeveryday/Notes/tree/main/nginx)
+
 ✅ [pyATS](https://github.com/labeveryday/Notes/tree/main/pyATS)
+
 ✅ [python](https://github.com/labeveryday/Notes/tree/main/python)
+
 ✅ [python packaging](https://github.com/labeveryday/Notes/tree/main/python_packaging)
+
 ✅ [Terraform](https://github.com/labeveryday/Notes/tree/main/Terraform)
+
 ✅ [vim](https://github.com/labeveryday/Notes/tree/main/vim)
