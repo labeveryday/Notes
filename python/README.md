@@ -1,6 +1,6 @@
 # Python Notes
 
-The first thing you need to understand about Python is the data structures. Thesese are the building blocks to your python applications
+The first thing you need to understand about Python is the data structures. These are the building blocks to your python applications
 
 ## Examples
 
