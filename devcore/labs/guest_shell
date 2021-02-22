@@ -1,9 +1,0 @@
-Configure Guest Shell on CSR
-
-1. Enable IOx in global config mode
-config t
- iox 
-
-2. Verify iox is running
-NOTE: CAF, IOxman and Libvirtd services must be running to enable GuestShell successfully.
-

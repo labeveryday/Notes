@@ -8,9 +8,9 @@ This is where I store notes from the different items that I am learning. These n
 
 ✅ [Ansible](https://github.com/labeveryday/Notes/tree/main/ansible)
 
-✅ [Curl](https://github.com/labeveryday/Notes/tree/main/Curl)
+✅ [Bash]()
 
-✅ [DEVCOR](https://github.com/labeveryday/Notes/tree/main/devcore)
+✅ [Curl](https://github.com/labeveryday/Notes/tree/main/Curl)
 
 ✅ [Docker](https://github.com/labeveryday/Notes/tree/main/Docker)
 
