@@ -1,6 +1,6 @@
 # My Learning Notes
 
-This is where I store notes from the different items that I am learning. These notes are a living breathing object that is constantly growing and evolving. 
+This is where I store notes from the different items that I am learning. These notes are a living breathing object that is constantly growing and evolving.
 
 ## Table of contents
 
@@ -8,7 +8,7 @@ This is where I store notes from the different items that I am learning. These n
 
 ✅ [Ansible](https://github.com/labeveryday/Notes/tree/main/ansible)
 
-✅ [Bash]()
+✅ [Bash](https://github.com/labeveryday/Notes/tree/main/Bash)
 
 ✅ [Curl](https://github.com/labeveryday/Notes/tree/main/Curl)
 
@@ -16,7 +16,7 @@ This is where I store notes from the different items that I am learning. These n
 
 ✅ [Flask](https://github.com/labeveryday/Notes/tree/main/Flask)
 
-✅ [GIT](https://github.com/labeveryday/Notes/tree/main/Git)
+✅ [Git](https://github.com/labeveryday/Notes/tree/main/Git)
 
 ✅ [Kubernetes](https://github.com/labeveryday/Notes/tree/main/Kubernetes)
 
@@ -39,3 +39,13 @@ This is where I store notes from the different items that I am learning. These n
 ✅ [Terraform](https://github.com/labeveryday/Notes/tree/main/Terraform)
 
 ✅ [vim](https://github.com/labeveryday/Notes/tree/main/vim)
+
+___
+
+##### Follow Me
+
+`Twitter`	https://twitter.com/labeveryday
+
+`YouTube`	https://youtube.com/labeveryday
+
+`Instagram`	https://instagram.com/labeveryday

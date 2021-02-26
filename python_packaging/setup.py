@@ -23,3 +23,5 @@ setuptools.setup(
 )
 
 # https://packaging.python.org/guides/distributing-packages-using-setuptools/
+
+# Note you can also install from requirements as well 
