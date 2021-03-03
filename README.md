@@ -10,6 +10,8 @@ This is where I store notes from the different items that I am learning. These n
 
 ✅ [Bash](https://github.com/labeveryday/Notes/tree/main/Bash)
 
+✅ [cisco](https://github.com/labeveryday/Notes/tree/main/cisco)
+
 ✅ [Curl](https://github.com/labeveryday/Notes/tree/main/Curl)
 
 ✅ [Docker](https://github.com/labeveryday/Notes/tree/main/Docker)
