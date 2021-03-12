@@ -13,9 +13,9 @@ Reasons for using GIT
 ## Git Command line
 
 | Command                                               | Description                                                                                   |
-| -------------                                         |:-------------:                                                                                |
+| -------------                                         |:-------------                                                                                |
 | git                                                   | Everything begins with git                                                                    |
-| `git help`                                            | Allows you to get hellp for a specific commandAllows you to get hellp for a specific command  |
+| `git help`                                            | Allows you to get help for a specific command  |
 | `git config`                                          | Config the tooling                                                                            |
 | `git config --global user.name "duan"`                | Configure the user name globally                                                              |
 | `git config --global user.email "duan@test.com"`      | Configure the user email globally                                                             |
@@ -31,6 +31,7 @@ Reasons for using GIT
 | `git checkout -b test`                                | Create a new branch and switch to it                                                          |
 | `git checkout -d test`                                | Removes a branch                                                                              |
 | `git log --all --decorate --oneline -graph`           | For BLOBs (Binary Large OBjects). Holds up to 4,294,967,295 bytes                             |
+| `git show e38f2b2`                                    | To view more details about a commit                                                           |                                            
 | `git diff`                                            | For BLOBs (Binary Large OBjects). Holds up to 4,294,967,295 bytes                             |
 | `git remote add origin git@github.com:duan/test.git`  | Meaning you can push up and pull down from origin                                             |
 | `git push -u origin master`                           | Push your code to repo                                                                        |

@@ -147,6 +147,14 @@ Who created the file
 
 `MAINTAINER Du'An Lightfoot "duanl@labeveryday.com"`
 
+Add ping 
+
+`FROM ubuntu`
+
+`RUN apt-get update && apt-get install -y iputils-ping`
+
+`CMD bash`
+
 Run - Make sure the system is up to date then install these know applications (no need to specify)
 
 `RUN apt-get update -y && apt-get install -y python3-pip python3-dev`
@@ -213,6 +221,15 @@ Run the container with the network and an ip in the subnet you created
 Run a docker container with Limited Memory and CPU Resources
 
 `docker run -d --name my_container --publish 8080:8080 --memory 200m --memory-swap 1G --cpu-shares 1024 app`
+
+Docker images are pretty minimal, But you can install ping in your official ubuntu docker image via:
+
+```bash
+apt-get update
+apt-get install iputils-ping
+```
+
+https://stackoverflow.com/questions/39901311/docker-ubuntu-bash-ping-command-not-found
 
 To remove:
 - all stopped containers
